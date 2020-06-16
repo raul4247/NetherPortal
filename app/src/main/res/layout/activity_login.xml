@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_primary_color"
+    android:orientation="vertical"
+    tools:context=".ui.activities.LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/login_title_margin_horizontal"
+        android:layout_marginVertical="@dimen/login_title_margin_vertical"
+        android:fontFamily="@font/minecrafter_reg"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/login_title_size" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="@dimen/login_input_width"
+        android:layout_height="@dimen/login_input_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/login_input_margin_vertical"
+        android:background="@color/login_input_background"
+        android:fontFamily="@font/raleway_medium"
+        android:hint="@string/login_username_hint"
+        android:padding="@dimen/login_input_padding"
+        android:textColor="@color/login_input_text_color"
+        android:textSize="@dimen/login_input_text_size" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="@dimen/login_input_width"
+        android:layout_height="@dimen/login_input_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/login_input_margin_vertical"
+        android:background="@color/login_input_background"
+        android:fontFamily="@font/raleway_medium"
+        android:hint="@string/login_key_hint"
+        android:inputType="textPassword"
+        android:padding="@dimen/login_input_padding"
+        android:textColor="@color/login_input_text_color"
+        android:textSize="@dimen/login_input_text_size" />
+
+    <CheckBox
+        android:layout_width="@dimen/login_input_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/login_input_margin_vertical"
+        android:buttonTint="@color/login_input_background"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/login_remember_me"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/login_input_checkbox_size"
+        android:translationX="@dimen/login_checkbox_left_padding" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="@dimen/login_button_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/login_input_margin_vertical"
+        android:backgroundTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/login_enter"
+        android:textAllCaps="false"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/login_input_text_size" />
+
+</LinearLayout>

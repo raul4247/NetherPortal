@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Nether Portal</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="login_username_hint">Username</string>
+    <string name="login_key_hint">Key</string>
+    <string name="login_enter">Enter</string>
+    <string name="login_remember_me">Remember Me</string>
+    <string name="item_server_control">Server Control</string>
+    <string name="item_waypoints">Waypoints</string>
+    <string name="item_logs">Logs</string>
+</resources>

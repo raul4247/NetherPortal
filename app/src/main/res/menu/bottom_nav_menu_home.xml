@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_server_control"
+        android:icon="@drawable/icon_server"
+        android:title="@string/item_server_control"/>
+
+    <item
+        android:id="@+id/navigation_waypoints"
+        android:icon="@drawable/icon_waypoint"
+        android:title="@string/item_waypoints"/>
+
+    <item
+        android:id="@+id/navigation_logs"
+        android:icon="@drawable/icon_log"
+        android:title="@string/item_logs"/>
+</menu>
