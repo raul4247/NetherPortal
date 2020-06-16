@@ -45,6 +45,7 @@ class HomeActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener false
         })
         homeBottomNavigationView.selectedItemId = R.id.navigation_server_control
+
     }
 
     private fun openFragment(fragment: Fragment) {
