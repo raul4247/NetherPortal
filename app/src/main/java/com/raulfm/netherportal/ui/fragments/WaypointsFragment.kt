@@ -1,4 +1,4 @@
-package com.raulfm.netherportal.ui.Fragments
+package com.raulfm.netherportal.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.raulfm.netherportal.R
 
-class LogsFragment : Fragment() {
+class WaypointsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-        inflater.inflate(R.layout.fragment_logs, container, false)
+        inflater.inflate(R.layout.fragment_server_control, container, false)
 
     companion object {
-        fun newInstance(): LogsFragment = LogsFragment()
+        fun newInstance(): WaypointsFragment = WaypointsFragment()
     }
 }
