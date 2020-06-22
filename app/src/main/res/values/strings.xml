@@ -13,5 +13,28 @@
     <string name="saved_remember_me">SavedRememberMe</string>
     <string name="saved_username">SavedUsername</string>
     <string name="saved_key">SavedKey</string>
+    <string name="instance_info_card_title">Instance Info</string>
+    <string name="minecraft_server_card_title">Minecraft Server</string>
+    <string name="info_card_online_label">Online:</string>
+    <string name="info_card_port_label">Port:</string>
+    <string name="info_card_version_label">Version:</string>
+    <string name="info_card_max_players_label">Max Players:</string>
+    <string name="info_card_online_players_label">Online Players:</string>
+    <string name="info_card_player_list_label">Player List:</string>
+    <string name="info_card_endpoint_label">Endpoint:</string>
+    <string name="info_card_ip_label">IP:</string>
+    <string name="info_card_status_label">Status:</string>
+    <string name="info_card_launch_time_label">Launch Time:</string>
+    <string name="open_button">Open</string>
+    <string name="close_button">Close</string>
+    <string name="reboot_button">Reboot</string>
+    <string name="not_available_label_value">Not Available</string>
+    <string name="none_label_value">None</string>
+    <string name="yes_label_value">Yes</string>
+    <string name="no_label_value">No</string>
+    <string name="error_ocurred">Server error!</string>
+    <string name="expired_session">Session Expired!</string>
+    <string name="sending_server_action">Sending %1$s action...</string>
+    <string name="wrong_credentails">Wrong username or key</string>
 
 </resources>

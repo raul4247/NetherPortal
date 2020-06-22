@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_background_secondary_color">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background_secondary_color"
+        android:orientation="vertical"
+        android:padding="@dimen/info_card_padding">
+
+        <ProgressBar
+            android:id="@+id/instanceInfoProgressBar"
+            android:layout_width="@dimen/circular_progress_bar_size"
+            android:layout_height="@dimen/circular_progress_bar_size"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/loading_circular_primary"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/instanceInfoContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/info_card_title_margin_bottom"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/instance_info_card_title"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/info_card_title_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_endpoint_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/instanceInfoEndpoint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="ip-xxx.xxx.xxx.xxx.sa-east-1.compute.internal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_ip_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/instanceInfoIP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="000.000.000.000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_status_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/instanceInfoStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="running" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_launch_time_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/instanceInfoLaunchTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="2020-06-17 22:05:01" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

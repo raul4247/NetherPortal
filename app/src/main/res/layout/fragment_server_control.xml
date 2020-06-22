@@ -1,17 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshServerControls"
     android:layout_width="match_parent"
-
-    android:background="@color/main_background_primary_color"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Server Control"
-        android:textColor="@color/text_white"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_primary_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/info_card_instance_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/server_control_item_margin" />
+
+            <include
+                layout="@layout/info_card_minecraft_server"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/server_control_item_margin" />
+
+
+            <ProgressBar
+                android:id="@+id/cooldownProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_margin="@dimen/server_control_item_margin"
+                android:indeterminate="false"
+                android:indeterminateTintMode="src_in"
+                android:max="100"
+                android:progressBackgroundTint="@color/text_white"
+                android:progressTint="@color/colorPrimary"
+                tools:progress="50" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/server_control_item_margin"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/openButton"
+                    android:layout_width="@dimen/server_control_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/server_control_button_margin_horizontal"
+                    android:background="@drawable/button_primary_background"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/open_button"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/button_primary_text_size" />
+
+                <Button
+                    android:id="@+id/closeButton"
+                    android:layout_width="@dimen/server_control_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/server_control_button_margin_horizontal"
+                    android:background="@drawable/button_primary_background"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/close_button"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/button_primary_text_size" />
+
+                <Button
+                    android:id="@+id/rebootButton"
+                    android:layout_width="@dimen/server_control_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/server_control_button_margin_horizontal"
+                    android:background="@drawable/button_primary_background"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/reboot_button"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/button_primary_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

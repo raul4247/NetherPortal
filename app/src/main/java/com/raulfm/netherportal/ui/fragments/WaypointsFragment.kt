@@ -9,7 +9,7 @@ import com.raulfm.netherportal.R
 
 class WaypointsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-        inflater.inflate(R.layout.fragment_server_control, container, false)
+        inflater.inflate(R.layout.fragment_waypoints, container, false)
 
     companion object {
         fun newInstance(): WaypointsFragment = WaypointsFragment()

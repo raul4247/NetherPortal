@@ -1,0 +1,195 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background_secondary_color"
+        android:orientation="vertical"
+        android:padding="@dimen/info_card_padding">
+
+        <ProgressBar
+            android:id="@+id/minecraftServerProgressBar"
+            android:layout_width="@dimen/circular_progress_bar_size"
+            android:layout_height="@dimen/circular_progress_bar_size"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/loading_circular_primary"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/minecraftServerContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/info_card_title_margin_bottom"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/minecraft_server_card_title"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/info_card_title_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_online_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/minecraftServerOnline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="Yes" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_port_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/minecraftServerPort"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="8080" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_version_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/minecraftServerVersion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="1.15.2" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/info_card_title_margin_bottom"
+                android:background="#eeeeee" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_max_players_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/minecraftServerMaxPlayers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_online_players_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/minecraftServerOnlinePlayers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="@string/info_card_player_list_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/minecraftServerPlayerList"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/info_card_item_margin_vertical"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/raleway_medium"
+                    android:textColor="@color/text_white"
+                    tools:text="[User1, User2, User3, User4, User5, User6]" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

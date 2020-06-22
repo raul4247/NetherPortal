@@ -3,11 +3,14 @@ package com.raulfm.netherportal.ui.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.raulfm.netherportal.R
-import com.raulfm.netherportal.api.controllers.LoginController
+import com.raulfm.netherportal.backend.api.controllers.LoginController
+import com.raulfm.netherportal.extensions.setState
 import com.raulfm.netherportal.model.User
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -18,11 +21,16 @@ class LoginActivity : AppCompatActivity() {
     private val defaultUsername: String = ""
     private val defaultKey: String = ""
 
+    private val autoLogKey = "autoLogKey"
+    private var autoLog: Boolean = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
         Glide.with(this).asGif().load(R.raw.nether_animated).into(loginPortalAnimation)
+
+        autoLog = intent.getBooleanExtra(autoLogKey, true)
 
         loginRememberMe.setOnCheckedChangeListener { _, state -> saveRememberMeState(state) }
         enterButton.setOnClickListener { submitLogin() }
@@ -30,6 +38,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun submitLogin() {
+        enterButton.setState(false)
+        setLoadingStatus(true)
+
         val user = User(loginUsername.text.toString(), loginKey.text.toString())
         LoginController.login(user,
             onSuccess = {
@@ -40,17 +51,43 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             },
             onBadCredentials = {
-                Toast.makeText(this.applicationContext, "Wrong username or key", Toast.LENGTH_SHORT)
+                Toast.makeText(
+                    this.applicationContext,
+                    getString(R.string.wrong_credentails),
+                    Toast.LENGTH_SHORT
+                )
                     .show()
+                enterButton.setState(true)
+                setLoadingStatus(false)
             },
             onError = {
                 Toast.makeText(
                     this.applicationContext,
-                    "Server is not available :(",
+                    getString(R.string.error_ocurred),
                     Toast.LENGTH_SHORT
                 ).show()
+                enterButton.setState(true)
+                setLoadingStatus(false)
             }
         )
+    }
+
+    private fun setLoadingStatus(status: Boolean) {
+        loginRememberMe.isEnabled = !status
+        loginUsername.isEnabled = !status
+        loginKey.isEnabled = !status
+
+        if (status) {
+            enterButton.background =
+                ContextCompat.getDrawable(this, R.drawable.button_disabled_background)
+            enterButton.text = " "
+            enterButtonProgressBar.visibility = View.VISIBLE
+        } else {
+            enterButton.background =
+                ContextCompat.getDrawable(this, R.drawable.button_primary_background)
+            enterButton.text = getString(R.string.login_enter)
+            enterButtonProgressBar.visibility = View.GONE
+        }
     }
 
     private fun checkPreviousRememberMe() {
@@ -64,7 +101,7 @@ class LoginActivity : AppCompatActivity() {
             loginRememberMe.isChecked = true
             loginUsername.setText(username)
             loginKey.setText(key)
-            submitLogin()
+            if (autoLog) submitLogin()
         }
     }
 

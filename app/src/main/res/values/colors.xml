@@ -10,6 +10,8 @@
     <color name="main_background_primary_color">#121212</color>
     <color name="main_background_secondary_color">#1f1f1f</color>
     <color name="text_color_secondary_background">#dddddd</color>
-    <color name="login_button_gradient_dark_color">#6311bf</color>
+    <color name="button_gradient_dark_color">#6311bf</color>
+    <color name="button_disabled_color">#4a4a4a</color>
+    <color name="button_disabled_dark_color">#454545</color>
     <color name="login_button_ripple_background">#bbbbbb</color>
 </resources>
